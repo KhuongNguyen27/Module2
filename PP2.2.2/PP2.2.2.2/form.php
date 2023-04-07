@@ -36,7 +36,7 @@
             ?>
         <table class="table-class">
             <tr>
-            <td>
+            <td td="table-class">
                 <?php echo 'kết quả là:' ?>
             </td>
             <td>
