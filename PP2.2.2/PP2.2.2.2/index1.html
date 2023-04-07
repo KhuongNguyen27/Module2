@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="process.js"></script>
+    <div>
+        <form action="form.php" method='post'>
+            <input type="number" name="firstMoney" placeholder="Inventment Amount"><br>
+            <input type="number" step="0.01" name="rateYear"  placeholder="Yearly Interest Rate %"><br>
+            <input type="number" name="numberYear"  placeholder="Number of Years"><br>
+            <input type="submit" value="Tính" onclick="processPHP();"><br>
+            <b> Mỗi năm có 4 quý áp dụng lãi xuất<br>Bạn có thể nhập 3.5 thể hiện 3 năm 6 tháng</b><br>
+            <b>Tiền bằng bằng: </b><b id="resulf"></b>
+        </form>
+    </div>
+</body>
+</html>

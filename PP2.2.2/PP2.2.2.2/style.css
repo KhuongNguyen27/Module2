@@ -1,0 +1,14 @@
+input{
+    margin-top:5px;
+    margin-left: 5px;
+}
+.main{
+    width: 500px;
+    background-color: blueviolet;
+}
+table{
+    border: 1px;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: auto;
+}
