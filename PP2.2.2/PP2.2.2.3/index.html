@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <input type="text" placeholder="Mô tả sản phẩm" name="mota"><br>
-        <input    
+    <form action="display_discount.php" method="post">
+        <input type="text" placeholder="Product Description: Mô tả của sản phẩm" name="description"><br>
+        <input type="text" placeholer="List Price: Giá niêm yết của sản phẩm" name="cost"><br>   
+        <input type="text" placeholer="Discount Percent: Tỷ lệ chiết khấu (phần trăm)" name="discount"><br>   
+        <input type="submit" value="Chiết khấu">
     </form>
 </body>
 </html>
