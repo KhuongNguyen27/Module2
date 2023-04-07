@@ -23,8 +23,9 @@
     ?>
     <table>
         <tr class="tableTr">
-            <td class="tableTd"> <?php echo $amount; ?><td>
-            <td class="tableTd"> <?php echo $discountPrice; ?><td>
+            <td class='tableTd'> <b>discount :</b><?php echo $amount; ?><b>đ</b></td>
+            <td class="tableTd"> <b>total: </b><?php echo $discountPrice; ?><b>đ</b><td>
+        </tr>    
     </table>
 </body>
 </html>

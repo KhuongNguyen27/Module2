@@ -1,0 +1,18 @@
+.tableTr {
+    position: relative;
+    border: 3px;
+    background-color: blueviolet;
+    width: 300px;
+    height: 100px;
+}
+.tableTd{
+    margin-top: 15px;
+    margin-left: 40px;
+    border: 3px;
+    border-color: brown ;
+    text-align: center;
+    font-size: 17px;
+    background-color: yellowgreen;
+    /* white-space: pre-wrap; */
+    display: block;
+}
