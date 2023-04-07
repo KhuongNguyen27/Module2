@@ -1,0 +1,9 @@
+table{
+    width: 800px;
+    border-color: blueviolet;
+    padding: 1px;
+}
+.lineFirst{
+    text-align: center;
+    font-size: 20px;
+}
