@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <form action="form.php" method="post">
+        <table>
+            <tr class="table Title">
+                <th colspan="4"><h1>Simple Calulatar</h1><br></th>
+            </tr>
+            <tr class="table th">
+                <th colspan="4"><b>First operand</b></th>
+            </tr>
+            <tr>
+                <th colspan="4">
+                    <input style="margin-left: 50px ; width: 150px; height: 30px;  border: 1px solid black;" type="text" name="numFirst" placeholder="First operand:">    
+                </th>
+            </tr >
+                    <td style="text-align: left; border: 1px solid black; width: 100px;" ><b>Operator:</b></td>
+                    <td colspan="3">
+                    <select style="width: 100px; height: 50px; font-size: 20px; border: 1px solid black;" name="operator" id="">
+                    <option type="submit" value="+" >+</option>
+                    <option type="submit" value="-" >-</option>
+                    <option type="submit" value="*" >*</option>
+                    <option type="submit" value="/" >/</option>
+                    <option type="submit" value="%" >%</option>
+                    </select>
+                    <td>
+                </tr>
+                 <tr>
+                    <th colspan="4"></th>
+                </tr>
+                <tr class="table th">
+                    <th colspan="4"><b>Second operand</b></th>
+                </tr>
+                <tr class="table Title">
+                    <th colspan="4">
+                    <input style="margin-left: 50px ; width: 150px; height: 30px;" type="text" name="numSecond" placeholder="Second operand: ">    
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="4" style="display: block; height: 20px;"></th>
+                </tr>
+                <tr>
+                    <th colspan="4">
+                        <input style="margin-left: 50px ; width: 150px; height: 30px;" type="submit" value="Tính">
+                    </td>
+                </tr>
+
+            </table>   
+    </form>
+    </div>
+</body>
+</html>
