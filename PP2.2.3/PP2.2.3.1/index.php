@@ -8,25 +8,12 @@
         <title>Document</title>
     </head>
     <body>
-    <form class='header' action='' method='post'>
-                <label>
-                    <b>Chọn ngày sinh từ: </b>
-                    <input class='submitValue' type="date" name="from" id="">
-                </label>
-                <label>
-                    <b>đến: </b>
-                    <input class='submitValue' type="date" name="to" id="">
-                </label>
-                <label>
-                    <input class='submitButton' type="submit" value ='Lọc'>
-                </label>
-            </form>
-            <?php include 'process.php'; ?>
+    <?php include 'process.php'; ?>
     <table  class='customerList' style='border-collapse: collapse;'>
         <tr>
             <th style="background-color: skyblue;" colspan='5'><h1>Danh sách khách hàng</h1></th>
         </tr>
-        <tr style="border: 1px; font-size: 20px;">
+        <tr style=" font-size: 20px;">
             <td style='border-bottom: 1px solid salmon;'><b>STT</b></td>
             <td style='border-bottom: 1px solid salmon;'><b>Tên</b></td>
             <td style='border-bottom: 1px solid salmon;'><b>Ngày sinh</b></td>
