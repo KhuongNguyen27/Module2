@@ -1,19 +1,14 @@
 <?php
-    function ranNum($x=0,$y=0){
+    function ranNum(){
         global $display;
-        $checkArray = 0;
+        $checkArray = true;
         $number = rand(100,1000);
-        for($i = 0; $i < count($display); $i++ ){
-                for($j = 0; $j < count($display[$i]) ; $j++){
-                        if($display[$i][$j] == $number)
-                            $checkArray = 1;   
-                    }
-        }
-        if ( $checkArray == 0 )
+        if(in_array($number,$display)){
+            return ranNum();
+        }else{
             return $number;
-        else    
-            ranNum();
-    }         
+        }
+    }  
     function checkArray($check,$x,$y){
         global $display;
         for($i=$x; $i < count($display); $i++){
@@ -21,7 +16,7 @@
                     if($i==$x && $j == $y)
                         continue;
                     if($check == $display[$i][$j]){
-                        array_splice($display[$i],$j,1,ranNum($i,$j));
+                        array_splice($display[$i],$j,1,ranNum());
                     }
                 }
             }
@@ -32,19 +27,24 @@
             $display[$i][$j] = ranNum();
         }
     echo '<pre>';
+    echo 'array =  <br>';
+    foreach ($display as $numIn) {
+        foreach ($numIn as $value) {
+            echo $value.' ';
+        }
+        echo '<br>';
+    }
     for($i = 0; $i < count($display); $i++ ){
         for($j =0; $j < count($display[$i]) ; $j++){
                 checkArray($display[$i][$j],$i,$j);
             }
         }
-    echo 'array = [ <br>';
-        for($i = 0; $i < count($display); $i++ ){
-            sort($display[$i]);
-            // print_r($display[$i]);
-            for($j =0; $j < count($display[$i]) ; $j++){
-                echo $display[$i][$j].', ';
+    echo 'array =  <br>';
+        foreach ($display as $numIn) {
+            foreach ($numIn as $value) {
+                echo $value.' ';
+            }
+            echo '<br>';
         }
-        echo '<br>';
-    }
-    echo '</pre>';
+        echo '</pre>';
     ?>
