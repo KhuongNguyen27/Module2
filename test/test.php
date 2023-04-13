@@ -21,7 +21,10 @@
     function ranNum(){
         return rand(1,100);
     }
-    $array = [ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum()];
+    // $array = [ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum()];
+    for ($i=0; $i < 10 ; $i++) { 
+        $array[] = ranNum();
+    }
     $n = count($array);
     for( $i = 0 ; $i < $n ; $i++ ) { 
         $min = $array[$i];
