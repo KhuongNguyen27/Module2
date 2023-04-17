@@ -1,57 +1,19 @@
 <?php
-    // function ranNum(){
-    //     return rand(1,100);
-    // }
-    // $array = [ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum()];
-    // $n = count($array);
-    // for( $i= 1 ; $i < $n; $i++ ){
-    //     $pos = $i;
-    //     while( $pos-1 >= 0 && $array[$pos] < $array[$pos-1] ){
-    //                 $temp = $array[$pos];
-    //                 $array[$pos]=$array[$pos-1];
-    //                 $array[$pos-1]= $temp;
-    //                 $pos--;
-    //         } 
-    //     }
-    // echo '<pre>';
-    // print_r($array);
-    // echo '</pre>';
-?>
-<?php
-    // function ranNum(){
-    //     return rand(1,100);
-    // }
-    // // $array = [ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum(),ranNum()];
-    // for ($i=0; $i < 10 ; $i++) { 
-    //     $array[] = ranNum();
-    // }
-    // $n = count($array);
-    // for( $i = 0 ; $i < $n ; $i++ ) { 
-    //     $min = $array[$i];
-    //     $count = $i;
-    //     for( $j = $i ; $j < $n ; $j++){
-    //         if($min > $array[$j]){
-    //             $min = $array[$j];
-    //             $count = $j;
-    //         }
-    //     }
-    //     $array[$count] = $array[$i];
-    //     $array[$i] = $min;
-    // }
-    // echo '<pre>';
-    // print_r($array);
-    // echo '</pre>';
-?>
-<?php
-$duong = 'Xấu';
-try{
-    if($duong = 'Xấu'){
-        throw new Exception("Đi vòng");
+    $display = file_get_contents('viettel.json');
+    $display = json_decode($display,true);
+    $condition = '/^[0-9]{4,4}+\ [0-9]{3,3}+\ [0-9]{3,3}+$/';
+    echo '<pre>';
+    for ($i=0; $i < count($display) ; $i++) { 
+        if(preg_match($condition,$display[$i])){
+            $display[$i] = preg_replace("/\b[0-9 ]{8,8}\b$/",".xxx.xxx",$display[$i]);
+            echo "$display[$i]<br>";
+            // echo $display[$i]."\n";
+            // $strdis = preg_split("/\ /",$display[$i]);
+            // print_r($strdis);
+        }
     }
-    echo 'Đi thằng ';
-}catch(Exception $e){
-    echo $e->getMessage();
-}finally{
-    echo '<br>Về nhà';
-}
+        // $str = "Vi du ve ham preg_replace 21321 878"; 
+        // $str = preg_replace("/\b[0-9]{3,3}\b/", "2000", $str);
+    echo '</pre>';
+   
 ?>

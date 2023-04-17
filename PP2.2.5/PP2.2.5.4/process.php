@@ -9,17 +9,19 @@
         $vina = [];
         $viettel = [];
         for ($i=0; $i <$lenght ; $i++) { 
-            $check = substr($array[$i],0,4);
-            if ($check == '0888') {
-                $vina[] = $array[$i];
-            }
-            if ($check == '0901') {
-                $mobi[] = $array[$i];
-            }
-            if ($check == '0981') {
-                $viettel[] = $array[$i];
-            }
+        //     $check = substr($array[$i],0,4);
+        //     if ($check == '0888') {
+        //         $vina[] = $array[$i];
+        //     }
+        //     if ($check == '0901') {
+        //         $mobi[] = $array[$i];
+        //     }
+        //     if ($check == '0981') {
+        //         $viettel[] = $array[$i];
+        //     }
+            if(strpos())
         }
+
         echo 'Lưu dữ liệu thành công<br>';
         print_r($vina);
         print_r($mobi);
