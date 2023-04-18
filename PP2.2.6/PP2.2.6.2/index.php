@@ -1,18 +1,18 @@
 <?php
     echo "<pre>";
-    function selectionSort($list){
-        for ($i=0; $i <count($list) ; $i++) { 
-            for ($j=count($list)-1; $j > $i; $j--) { 
-                if ($list[$j-1] > $list[$j]) {
-                    $temp = $list[$j];
-                    $list[$j] = $list[$j-1];
-                    $list[$j-1] = $temp;
-                }
+    function  insertionSort($list) {
+        for ($i=1; $i <count($list) ; $i++) { 
+            $pos = $i;
+                while ( $pos-1 >= 0 && $list[$pos] > $list[$pos-1] ) {
+                    $temp = $list[$pos];
+                    $list[$pos] = $list[$pos-1];
+                    $list[$pos-1] = $temp;
+                    $pos--;
+                }    
             }
+            return $list;
         }
-        return $list;
-    }
-   $array =  [2, 3, 2, 5, 6, 1, -2, 3, 14, 12];
-   print_r(selectionSort($array));
+   $array =   [5, -4, 3, 7, 2, 1, 0, 8, 9, 2];
+   print_r(insertionSort($array));
    echo "</pre>";
 ?>
