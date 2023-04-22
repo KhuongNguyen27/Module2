@@ -17,22 +17,7 @@
     </body>
     </html>
     <?php
-    // class Olympic{
-    //     public $medal;
-    //     public $country;
-    //     public function $getCountry($value){
-    //         $this->$country = $value;
-    //     }
-    //     public function $putCountry(){
-    //         return $this->$country;
-    //     }
-    //     public function $getMedal($value){
-    //         $this->$medal = $value;
-    //     }
-    //     public function $putMedal(){
-    //         return $this->$medal;
-    //     }
-    // }
+    
     function sortRank($array){
         $length = count($array);
         for ($i=0; $i < $length ; $i++) {
@@ -71,5 +56,6 @@
     }
     display($olympic);
     $olympic = json_encode($olympic);
+    insertValue($olympic);
     file_put_contents('rank.json',$olympic);
     ?>
